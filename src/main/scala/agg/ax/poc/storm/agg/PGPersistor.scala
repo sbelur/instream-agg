@@ -72,9 +72,9 @@ object PGPersistor extends DB{
 
   private def createDataSource(): BasicDataSource = {
     val dataSource = new BasicDataSource()
-    dataSource.setUrl("jdbc:postgresql://ec2-54-255-69-156.ap-southeast-1.compute.amazonaws.com:5432/apigee")
-    dataSource.setUsername("postgres")
-    dataSource.setPassword("postgres")
+    dataSource.setUrl("jdbc:postgresql://<HOST>:5432/<db>")
+    dataSource.setUsername("<user>")
+    dataSource.setPassword("<password>")
     dataSource.setInitialSize(5)
     dataSource.setMaxActive(10)
     dataSource.setMaxIdle(1)
